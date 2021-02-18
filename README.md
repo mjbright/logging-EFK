@@ -9,14 +9,20 @@ This repo is derived from the manifests referred to in this article:
 The manifests have been just slightly modified, tested on 1 master + 3 worker cluster setup using vagrant/ansible
 
 The manifests:
+
+- namespace.yaml: Defines the namespace 'kube-logging' to be used
+
 - fluentd_daemonset.yaml: Defines for the Fluentd logging agent
   - a ServiceAccount, ClusterRole, ClusterRoleBinding
   - a DaemonSet
+
 - elasticsearch_statefulset.yaml: Defines for the ElasticSearch engine:
   - a headless ClusterIP service
   - a StatefulSet controller
+
 - kibana_deployment.yaml: Defines for the Kibana dashboard to ElasticSearch
   - a NodePort Service
   - a Deployment
+
 - pvs_hostpath.yaml: Defines 3 Persistent Volumes to be used by ElasticSearch
 
